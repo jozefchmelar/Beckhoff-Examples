@@ -1,0 +1,31 @@
+{
+  "AliasBlocks": [],
+  "EnumBlocks": [],
+  "FunctionBlocks": [],
+  "GlobalVariableTables": [],
+  "Name": "Plc",
+  "Namespace": null,
+  "ProgramBlocks": [
+    {
+      "ImplementationText": "",
+      "Methods": [],
+      "Properties": [],
+      "Name": "MAIN",
+      "DeclarationText": "[NS : '' NAME : 'MAIN']\nPROGRAM MAIN\nVAR\n\t{attribute addProperty Name \"<#Hello world#>\"}\n\tHello_World : stTreeStruct;\n\nEND_VAR\n",
+      "MirrorFiles": null
+    }
+  ],
+  "StructBlocks": [
+    {
+      "Name": "stBools",
+      "DeclarationText": "[NS : '' NAME : 'stBools'] [STRUCT]\n{attribute wpf [Container(Layout.Stack)]}\nTYPE stBools :\nSTRUCT\n\tBoolOne :BOOL;\n\tBoolTwo:BOOL;\n\tBoolThree:BOOL;\n\tBoolFive:BOOL;\nEND_STRUCT\nEND_TYPE",
+      "MirrorFiles": null
+    },
+    {
+      "Name": "stTreeStruct",
+      "DeclarationText": "[NS : '' NAME : 'stTreeStruct'] [STRUCT]\n{attribute wpf [Container(Layout.Stack)]}\nTYPE stTreeStruct :\nSTRUCT\n\tOne:BOOL;\n\tTwo:BOOL;\n\tAnother:STRING;\n\tThisOne:STRING;\n\tANumberWouldBeCool:INT;\n\tBools : stBools;\nEND_STRUCT\nEND_TYPE\n",
+      "MirrorFiles": null
+    }
+  ],
+  "UnionBlocks": []
+}

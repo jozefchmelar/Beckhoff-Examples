@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <POU Name="CSharpMethod" Id="{a3807a5d-11cb-4323-9a15-d08b8477e2a3}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK CSharpMethod
+VAR
+	InvokeRequested : BOOL;
+	InvokeInProgress : BOOL;
+	InvokeDone : BOOL;
+	InvokeError : BOOL;
+	ErrorMessage :STRING;
+	CommandId : STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Invoke" Id="{487e0321-9abc-44d7-b3a0-5252568a1b88}">
+      <Declaration><![CDATA[METHOD Invoke : BOOL]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF  NOT InvokeRequested AND 
+	NOT InvokeInProgress 
+THEN 
+	InvokeRequested := TRUE; // Inxton listens to this change
+	InvokeDone :=FALSE;
+	InvokeError :=FALSE; 
+END_IF
+
+// Inxton will set the execution to InProgress.
+IF InvokeInProgress THEN
+	//Inxton will set the Done after the execution finished. 	
+	IF InvokeDone THEN
+		InvokeInProgress := FALSE;
+		InvokeRequested := FALSE;
+		Invoke := TRUE;
+		RETURN;
+	END_IF
+	
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

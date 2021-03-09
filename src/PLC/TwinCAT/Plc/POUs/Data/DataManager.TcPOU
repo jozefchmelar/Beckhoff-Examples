@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <POU Name="DataManager" Id="{764204d4-1e96-47b0-8035-796674c2a74b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK DataManager
+VAR
+	Settings : stSettings;
+	{attribute addProperty Name "Save to database" }
+	SaveSettings : CSharpMethod;
+	{attribute clr [RenderIgnore()]}
+	Invoke :BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF Invoke THEN
+	IF Save() THEN
+		Invoke :=FALSE;	
+	END_IF
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="Save" Id="{74092171-1644-4089-9273-6edaf4d4fafa}">
+      <Declaration><![CDATA[METHOD Save : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Save := SaveSettings.Invoke();]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

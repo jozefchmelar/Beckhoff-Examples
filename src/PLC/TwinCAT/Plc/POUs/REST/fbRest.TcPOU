@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <POU Name="fbRest" Id="{53ec521c-950a-46ad-adcd-c9092641d497}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fbRest
+VAR
+	ToAnalyse : STRING := 'I think you$'re a great person! I think he$'s much worse than you are.';
+	AnalysisResult:STRING;
+	{attribute addProperty Name "Analyse sentiment" }
+	RestCall : CSharpMethod;
+	{attribute clr [RenderIgnore()]}
+	StartSending : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF StartSending THEN
+	IF RestCall.Invoke() THEN
+		StartSending :=FALSE;	
+	END_IF
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

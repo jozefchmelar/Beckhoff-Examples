@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <DUT Name="stSettings" Id="{661a5020-56af-4477-9f34-e824929e1c41}">
+    <Declaration><![CDATA[TYPE stSettings EXTENDS stEntity :
+STRUCT
+	One:BOOL;
+	Two:BOOL;
+	Another:STRING;
+	ThisOne:STRING;
+	bools :stBools;
+	trees : stTreeStruct;
+	xbools :stBools;
+	atrees : stTreeStruct;
+	sbools :stBools;
+	ttrees : stTreeStruct;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

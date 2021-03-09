@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <POU Name="fbSms" Id="{8ad16c05-137a-445f-bee2-4ee3cd1d08d7}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fbSms
+VAR
+	Recipient:STRING := '+15558675310';
+	Content : STRING := ' This a test message is from the PLC!';
+	{attribute addProperty Name "Send text message" }
+	SendTextMessage : CSharpMethod;
+	{attribute clr [RenderIgnore()]}
+	StartSending : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF StartSending THEN
+	IF SendTextMessage.Invoke() THEN
+		StartSending :=FALSE;	
+	END_IF
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

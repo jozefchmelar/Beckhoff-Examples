@@ -1,0 +1,78 @@
+{
+  "Types": [
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "CSharpMethod",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "DataManager",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbEmail",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbRest",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "fbSms",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "RemoteSorting",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 4
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stBools",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stEntity",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stSettings",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stTreeStruct",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stPrograms",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "MAIN",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 3
+    }
+  ],
+  "Name": "Plc",
+  "Namespace": "Plc"
+}

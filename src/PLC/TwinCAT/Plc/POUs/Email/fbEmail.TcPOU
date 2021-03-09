@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <POU Name="fbEmail" Id="{ecfdf679-b9c9-492a-8601-827a3e4b8860}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fbEmail
+VAR
+	Recipient:STRING := 'jozef.chmelar@inxton.com';
+	Subject:STRING := 'Hello PLC Subject';
+	Content : STRING := 'This email is from the PLC!';
+	{attribute addProperty Name "Send email" }
+	SendEmail : CSharpMethod;
+	{attribute clr [RenderIgnore()]}
+	StartSending : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF StartSending THEN
+	IF SendEmail.Invoke() THEN
+		StartSending :=FALSE;	
+	END_IF
+END_IF]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

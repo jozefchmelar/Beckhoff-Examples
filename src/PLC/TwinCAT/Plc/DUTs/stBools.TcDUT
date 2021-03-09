@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <DUT Name="stBools" Id="{fbd2087e-2797-4507-bb48-e56cfd53c4d9}">
+    <Declaration><![CDATA[{attribute wpf [Container(Layout.Stack)]}
+TYPE stBools :
+STRUCT
+	BoolOne :BOOL;
+	BoolTwo:BOOL;
+	BoolThree:BOOL;
+	BoolFive:BOOL;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

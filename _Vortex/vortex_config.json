@@ -1,0 +1,31 @@
+{
+  "ConfigFile": null,
+  "OutputDirectory": "C:\\MTS\\Develop\\GitHub\\template.essentials\\_Vortex\\out",
+  "SolutionPath": "C:\\MTS\\Develop\\GitHub\\template.essentials\\template.sln",
+  "CompilableAttributesSignatures": [
+    "wpf",
+    "clr"
+  ],
+  "TypeAttributesContainer": {
+    "AttributesDictionary": {
+      "vortex.compiler.Coding.BuilderOnliner": {
+        "Attributes": []
+      },
+      "vortex.compiler.Coding.BuilderPlainer": {
+        "Attributes": []
+      },
+      "vortex.compiler.Coding.BuilderOnlinerInterface": {
+        "Attributes": []
+      },
+      "vortex.compiler.Coding.BuilderShadowerInterface": {
+        "Attributes": []
+      }
+    }
+  },
+  "CreatePlcLibraries": false,
+  "UpdateControllerVersionInfo": false,
+  "CloseVisualStudionOnDone": false,
+  "BuildConnectorProjects": false,
+  "IsLibraryCapable": true,
+  "DoInferUnknownTypes": false
+}

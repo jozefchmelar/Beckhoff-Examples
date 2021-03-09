@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.5">
+  <DUT Name="stPrograms" Id="{63090ffb-db93-43a1-8f71-40fdf927d602}">
+    <Declaration><![CDATA[	{attribute wpf [Container(Layout.Tabs)]}
+TYPE stPrograms :
+STRUCT	 
+	{attribute wpf [Container(Layout.Stack)]}
+	EmailSender : fbEmail;
+	{attribute wpf [Container(Layout.Stack)]}
+	Sorting : RemoteSorting;
+	{attribute wpf [Container(Layout.Stack)]}
+	Data : DataManager;
+	{attribute wpf [Container(Layout.Stack)]}
+	TextMsg : fbSms;
+	{attribute wpf [Container(Layout.Stack)]}
+	RestCall :fbRest;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,24 @@
+{
+  "Types": [
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stBools",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "stTreeStruct",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 1
+    },
+    {
+      "TypeAttributes": "\n{attribute addProperty Name \"\" }",
+      "TypeName": "MAIN",
+      "Namespace": "Plc",
+      "TypeMetaInfo": 3
+    }
+  ],
+  "Name": "Plc",
+  "Namespace": "Plc"
+}
