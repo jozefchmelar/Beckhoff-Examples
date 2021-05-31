@@ -1,6 +1,6 @@
 # Beckhoff-Examples
 ## Modern features in not so modern industry.
-
+### Video demo on [YouTube](https://youtu.be/C_V07tuDgFE)
 This repository contains code with simple features like : 
 
 - Sending an email
